@@ -1,12 +1,12 @@
----
-Deploy a smart contract to Validium using the validium-cli in under 5 minutes
----
-
-# Deploy using Validium CLI
-
----
-
 ## ![validium-cli](./banner.png)
+
+---
+
+# Validium CLI
+
+---
+
+## Deploy a smart contract to Validium using the validium-cli in under 5 minutes
 
 This Page shows you how to deploy and interact with a smart contract on Validium in less than 5 minutes. It will help you get familiar with the Validium smart contract development and deployment process using validium-cli.
 
@@ -368,13 +368,13 @@ Check the transactions in Validium Block Explorer as well:
 
 <figure><img src="../../.gitbook/assets/explorer-after-interact-script.png" alt=""><figcaption><p>Three transactions which was triggered from the interact.ts script</p></figcaption></figure>
 
-### Takeaways <a href="#takeaways" id="takeaways"></a>
+### Takeaways
 
 - **`validium-cli`:** This CLI tool streamlines deployment and facilitates seamless interaction with the Validium Network.
 - **EVM-compatibility**: Validium is EVM-compatible and you can write smart contracts in Solidity or Vyper as in Ethereum.
 - **Custom compilers**: smart contracts deployed to Validium must be compiled with the customs compilers: `zksolc` for Solidity and `zkvyper` for Vyper.
 
-### Next steps <a href="#next-steps" id="next-steps"></a>
+### Next steps
 
 - Follow the same above steps to deploy your contract, changes can be made to `interact.ts` file and use your methods from the contract.
-- Continue learning by [Deploy using Quickstart Repository](deploy-using-quickstart-repository.md).
+- Continue learning by [Deploy using Quickstart Repository](https://validium.gitbook.io/docs/start-coding/quickstart/deploy-using-quickstart-repository).
