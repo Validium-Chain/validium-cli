@@ -1,10 +1,6 @@
 ## ![validium-cli](./banner.png)
 
----
-
 # Validium CLI
-
----
 
 ## Deploy a smart contract to Validium using the validium-cli in under 5 minutes
 
