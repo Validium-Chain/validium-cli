@@ -5,7 +5,7 @@
   "main": "bin/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Validium-Chain/validium-cli"
+    "url": "git+https://github.com/Validium-Chain/validium-cli.git"
   },
   "homepage": "https://github.com/Validium-Chain/validium-cli#readme",
   "scripts": {
@@ -13,7 +13,7 @@
     "dev": "ts-node src/index.ts"
   },
   "bin": {
-    "validium-cli": "./bin/index.js"
+    "validium-cli": "bin/index.js"
   },
   "dependencies": {
     "commander": "^12.1.0",
