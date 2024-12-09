@@ -1,5 +1,7 @@
 import { execSync } from "child_process";
 import { log } from "../utils/logger";
+import path from "path";
+import { fileURLToPath } from "url";
 
 export const runCommand = (command: string) => {
   try {
@@ -10,4 +12,9 @@ export const runCommand = (command: string) => {
   }
 
   return true;
+};
+
+export const getDirPath = (filePath: string) => {
+  const filename = fileURLToPath(filePath);
+  return path.dirname(filename);
 };
