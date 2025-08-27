@@ -54,7 +54,7 @@ Add your account wallet private key here using which you want to deploy and inte
 
 Review the contract inside `contracts` folder:
 
-{% code title="Counter.sol" %}
+_Counter.sol_
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -127,7 +127,7 @@ Compiling 2 Solidity files
 Successfully compiled 2 Solidity files
 ```
 
-> It shows: `Successfully compiled 2 Solidity files`, becuase in the `contracts` folder we have two contracts, `Counter.sol` > &#x20;and `MessageBoard.sol,` here we are taking the example of `Counter.sol` only.
+> It shows: `Successfully compiled 2 Solidity files`, becuase in the `contracts` folder we have two contracts, `Counter.sol` and `MessageBoard.sol,` here we are taking the example of `Counter.sol` only.
 
 2. Deploy to Validium Testnet:
 

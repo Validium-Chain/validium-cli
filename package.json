@@ -1,6 +1,6 @@
 {
   "name": "validium-cli",
-  "version": "0.3.0",
+  "version": "1.0.1",
   "description": "\"This CLI tool streamlines deployment and facilitates seamless interaction with the Validium Network\"",
   "main": "bin/index.js",
   "repository": {
