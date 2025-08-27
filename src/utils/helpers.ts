@@ -7,7 +7,14 @@ export const runCommand = (command: string) => {
   try {
     execSync(command, { stdio: "inherit" });
   } catch (error) {
-    log.error(`Failed to execute the command! ${error}`);
+    const defaultMsg = "Failed to execute the command!";
+    let errMsg = error instanceof Error ? error.message : null;
+
+    // Silent hardhat related errors
+    if (errMsg && errMsg.toLowerCase().includes("npx hardhat")) {
+      errMsg = " ";
+    }
+    log.error(`${defaultMsg} ${errMsg ?? error}`);
     return false;
   }
 

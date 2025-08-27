@@ -3,9 +3,14 @@ import { runCommand } from "../utils/helpers";
 import { log } from "../utils/logger";
 
 export const compile = () => {
-  const compileContractCommand = `npx hardhat compile`;
+  try {
+    const compileContractCommand = `npx hardhat compile`;
 
-  log.info(`Setting up compilation environment...`);
-  const compiled = runCommand(compileContractCommand);
-  if (!compiled) process.exit(PROCESS_CODE.failure);
+    log.info(`Setting up compilation environment...`);
+    const compiled = runCommand(compileContractCommand);
+    if (!compiled) process.exit(PROCESS_CODE.failure);
+  } catch (error) {
+    log.error((error as Error).message);
+    process.exit(PROCESS_CODE.failure);
+  }
 };

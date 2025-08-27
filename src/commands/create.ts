@@ -1,6 +1,7 @@
 import { PROCESS_CODE } from "../utils/constants";
 import { runCommand } from "../utils/helpers";
 import { log } from "../utils/logger";
+import kleur from "kleur";
 
 export const create = (projectName = "validium-project") => {
   const gitCloneCommand = `git clone --depth 1 https://github.com/Validium-Chain/Deploy-on-Validium ${projectName}`;
@@ -19,24 +20,27 @@ export const create = (projectName = "validium-project") => {
   // Greet on success
   log.success("All set! You are ready to get started with Validium Network 🎉");
   console.log(`
-        Follow these steps:
+        ${kleur.bold("Follow these steps")}:
         1. cd ${projectName}
-        2. Create .env file at root and add -
+        2. Create ${kleur.bold(".env")} file at root and add -
             WALLET_PRIVATE_KEY=
             INFURA_API_KEY=
-        3. npx validium-cli compile
-        4. Inside deploy.ts add -
-            contractArtifactName
-            constructorArguments
-        5. npx validium-cli deploy <script-name>
-        6. Copy contract address from deployment logs and add it to the interact.ts -
-            CONTRACT_ADDRESS
-            CONTRACT_NAME
-        7. npx validium-cli interact <script-name>
+        3. ${kleur.yellow("npx validium-cli compile")}
+            - Compiles all the contracts inside the 'contracts' folder.
+            - Generates a 'artifacts-zk' folder which contains all the compiled contract artifacts.
+        4. ${kleur.yellow("npx validium-cli deploy")}
+            - Asks to select the contract to deploy from the list of 'compiled contracts'.
+            - Generates a 'deployments-zk' folder which contains deployed contract meta and bytecode.
+            - Save the deployed contract address from the deployment logs (can also be found inside the 'deployments-zk' folder).
+        7. ${kleur.yellow("npx validium-cli interact")}
+            - Asks to select the contract to interact with from the list of 'compiled contrats'.
+            - When prompted, provide the 'deployed contract address' of the selected contract.
 
         `);
   log.info(
-    `For more information please visit: https://validium.gitbook.io/docs/start-coding/quickstart/deploy-using-quickstart-repository
+    `For more information please visit: ${kleur.underline(
+      "https://validium.gitbook.io/docs/start-coding/quickstart/deploy-using-validium-cli"
+    )}
       `
   );
 };
