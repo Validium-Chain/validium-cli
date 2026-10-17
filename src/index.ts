@@ -56,3 +56,5 @@ program
   });
 
 program.parse(process.argv);
+
+// TODO: add proper new line spacing after each command so that things look clear.

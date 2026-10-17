@@ -1,14 +1,14 @@
+# Validium CLI 🚀
+
+Deploy a smart contract to [Validium Network](https://www.validium.network/) using the validium-cli in under 5 minutes
+
 <div align="center">
   <img src="banner.png" alt="validium-cli" />
 </div>
 
-# Validium CLI
-
-## Deploy a smart contract to Validium using the validium-cli in under 5 minutes
-
 This Page shows you how to deploy and interact with a smart contract on Validium in less than 5 minutes. It will help you get familiar with the Validium smart contract development and deployment process using validium-cli.
 
-Content:
+## Content:
 
 - Build a smart contract named Counter.
 - Deploy the smart contract to the Validium Testnet.
